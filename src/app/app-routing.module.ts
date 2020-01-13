@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { HomeComponent } from './home/home.component';
 
+// main route file to manage all the routing and pages
 const routes: Routes = [
   {
   path: '',
@@ -106,6 +106,14 @@ const routes: Routes = [
         loadChildren: './+tabs/tabs.module#TabsModule',
         data: {
           title: 'Tabs',
+        }
+      }
+      , {
+        path: 'users',
+        loadChildren: './users/users.module#UsersModule',
+        data: {
+          title: 'Users',
+          // customLayout: true
         }
       }
     ]
